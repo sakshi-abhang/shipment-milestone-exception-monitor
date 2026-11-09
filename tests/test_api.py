@@ -30,6 +30,10 @@ def test_shipment_not_found():
     }
     
 def test_get_existing_shipment():
+    client.delete(
+        "/shipments/SHP-TEST-001"
+    )
+
     shipment_data = {
         "shipment_id": "SHP-TEST-001",
         "container_number": "TEST1234567",
